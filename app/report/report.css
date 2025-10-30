@@ -1,0 +1,46 @@
+/* Styles for the Unnecessary Expense Report UI */
+.report-grid {
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  gap: 24px;
+}
+
+.upload-box {
+  border: 2px dashed #e5e7eb;
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+  min-height: 220px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.6), rgba(249,250,251,0.6));
+}
+
+.subscription-list {
+  display: grid;
+  gap: 12px;
+}
+
+.badge {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.badge.duplicate { background:#fee2e2; color:#991b1b; }
+.badge.unused { background:#e0f2fe; color:#0369a1; }
+.badge.ok { background:#ecfdf5; color:#065f46; }
+
+.card { border:1px solid #e6e6e6; border-radius:10px; padding:12px; background:white; }
+
+.generate-btn {
+  background:#111827; color:white; padding:10px 14px; border-radius:8px; font-weight:600;
+}
+
+@media (max-width: 880px) {
+  .report-grid { grid-template-columns: 1fr; }
+}

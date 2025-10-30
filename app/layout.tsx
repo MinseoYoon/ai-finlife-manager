@@ -27,7 +27,18 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <div className="min-h-screen bg-[color:var(--background)] text-[color:var(--foreground)]">
+          <header className="border-b border-gray-200/60 bg-transparent">
+            <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+              <div className="flex items-center gap-4">
+                <a href="/" className="text-lg font-semibold">AI Finlife</a>
+                <a href="/report" className="rounded-md px-3 py-2 text-sm hover:bg-black/5">불필요 지출 감지 리포트</a>
+              </div>
+              <div className="text-sm text-gray-600">UI prototype</div>
+            </nav>
+          </header>
+          <main className="mx-auto max-w-6xl px-6 py-8">{children}</main>
+        </div>
       </body>
     </html>
   );
